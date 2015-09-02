@@ -8,6 +8,7 @@ openiosds::namespace {'OPENIO':
   ns             => 'OPENIO',
   conscience_url => '127.0.0.1:6000',
   eventagent_url => 'tcp://127.0.0.1:6008',
+  oioproxy_url   => '127.0.0.1:6006',
 }
 openiosds::conscience {'conscience-1':
   ns        => 'OPENIO',
