@@ -33,4 +33,5 @@ openiosds::rawx {'rawx-1':
 openiosds::oioeventagent {'oio-event-agent-1':
   ns        => 'OPENIO',
   ipaddress => '127.0.0.1',
+  no_exec   => true,
 }
