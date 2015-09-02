@@ -1,5 +1,6 @@
-# Start all services
-$GRIDINITCMD -S $GRIDINIT_SOCKET start
+# Start GridInit
+$GRIDINITD -d $GRIDINITD_CONF
+sleep 1
 
 echo "Waiting for the meta1 to register ..."
 etime_start=$(date +"%s")
@@ -24,9 +25,7 @@ $OIOMETA0INIT $NS || \
 # Restarting meta0 and meta1
 echo "Restarting directory services ..."
 $GRIDINITCMD -S $GRIDINIT_SOCKET restart @meta0
-$GRIDINITCMD -S $GRIDINIT_SOCKET restart @meta1
-$GRIDINITCMD -S $GRIDINIT_SOCKET restart @meta2
 
 # Waiting for service to restart ...
-sleep 5
+sleep 2
 
