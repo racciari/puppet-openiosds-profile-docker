@@ -1,4 +1,8 @@
 openiosds::sdsagent {'sds-agent-0':
+  no_exec => true,
+}
+class {'gridinit':
+  no_exec => true,
 }
 openiosds::namespace {'OPENIO':
   ns             => 'OPENIO',
