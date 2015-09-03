@@ -41,9 +41,15 @@ openiosds::oioeventagent {'oio-event-agent-1':
   no_exec   => true,
 }
 openiosds::account {'account-1':
-  ns        => 'OPENIO',
-  ipaddress => '127.0.0.1',
-  no_exec   => true,
+  ns         => 'OPENIO',
+  ipaddress  => '127.0.0.1',
+  redis_host => '127.0.0.1',
+  no_exec    => true,
+}
+openiosds::redis {'redis-1':
+  ns         => 'OPENIO',
+  ipaddress  => '127.0.0.1',
+  no_exec    => true,
 }
 openiosds::oioproxy {'oioproxy-1':
   ns        => 'OPENIO',
