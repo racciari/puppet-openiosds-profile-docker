@@ -45,7 +45,6 @@ openiosds::rdir {'rdir-0':
 }
 openiosds::oioblobindexer {'oio-blob-indexer-rawx-0':
   ns        => 'OPENIO',
-  ipaddress => '127.0.0.1',
   no_exec   => true,
 }
 openiosds::oioeventagent {'oio-event-agent-0':
