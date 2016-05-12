@@ -64,7 +64,6 @@ openiosds::redis {'redis-0':
 }
 openiosds::conscienceagent {'conscienceagent-0':
   ns        => 'OPENIO',
-  ipaddress => '127.0.0.1',
   no_exec   => true,
 }
 openiosds::beanstalkd {'beanstalkd-0':
