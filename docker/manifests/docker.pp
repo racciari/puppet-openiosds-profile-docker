@@ -13,9 +13,10 @@ openiosds::namespace {'OPENIO':
   eventagent_url => "beanstalk://${ipaddr}:6014",
 }
 openiosds::account {'account-0':
-  ns        => 'OPENIO',
-  ipaddress => "${ipaddr}",
-  no_exec   => true,
+  ns         => 'OPENIO',
+  ipaddress  => "${ipaddr}",
+  redis_host => "${ipaddr}",
+  no_exec    => true,
 }
 openiosds::conscience {'conscience-0':
   ns        => 'OPENIO',
