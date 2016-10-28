@@ -11,6 +11,7 @@ openiosds::namespace {'OPENIO':
   conscience_url => "${ipaddr}:6000",
   oioproxy_url   => "${ipaddr}:6006",
   eventagent_url => "beanstalk://${ipaddr}:6014",
+  ecd_url        => "${ipaddr}:6017",
 }
 openiosds::account {'account-0':
   ns         => 'OPENIO',
@@ -72,6 +73,11 @@ openiosds::conscienceagent {'conscienceagent-0':
   no_exec   => true,
 }
 openiosds::beanstalkd {'beanstalkd-0':
+  ns        => 'OPENIO',
+  ipaddress => "${ipaddr}",
+  no_exec   => true,
+}
+openiosds::ecd {'ecd-0':
   ns        => 'OPENIO',
   ipaddress => "${ipaddr}",
   no_exec   => true,
